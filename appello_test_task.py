@@ -15,7 +15,7 @@ def draw_signature(folder_name):
     for filename in os.listdir(dir_path):
         if filename.endswith('.jpg'):
             message = filename.split('.')[0].replace('-', ' ')
-            message = f'@{message}'
+            message = f'@{message.capitalize()}'
             color = 'rgb(255, 255, 255)'
             font = ImageFont.truetype('Roboto-Bold.ttf', size=22)
 
