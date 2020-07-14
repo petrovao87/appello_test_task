@@ -4,6 +4,13 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 def draw_signature(folder_name):
+    """
+    Function receives folder name or use default 'output-images'
+    as folder name.
+    Open source images from folder 'source-images', add signature
+    to source image and save modified images to output folder.
+    :param folder_name:
+    """
     dir_path = os.path.join(os.getcwd(), 'source-images')
     if not output_folder_name:
         output_images_dir = os.path.join(os.getcwd(), 'output-images')
@@ -39,5 +46,5 @@ def draw_signature(folder_name):
 
 
 if __name__ == '__main__':
-    output_folder_name = input()
+    output_folder_name = input('Enter output folder name: ')
     draw_signature(output_folder_name)
